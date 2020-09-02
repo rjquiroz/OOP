@@ -3,11 +3,9 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GridPaneController implements Initializable
-{
+public class GridPaneController implements Initializable {
     @Override
-    public void initialize(URL location, ResourceBundle resource)
-    {
+    public void initialize(URL location, ResourceBundle resource) {
 
     }
 }

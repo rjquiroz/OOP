@@ -7,17 +7,19 @@ import javafx.scene.text.Text;
 
 public class Controller {
 
-        @FXML
+    @FXML
     private Label lblOutput;
 
     public void sayHello() {
         lblOutput.setText("Hello FXML!");
 
-         }
+    }
 
-    @FXML private Text actiontarget;
+    @FXML
+    private Text actiontarget;
 
-    @FXML protected void handleSubmitButtonAction(ActionEvent event) {
+    @FXML
+    protected void handleSubmitButtonAction(ActionEvent event) {
         actiontarget.setText("Sign in button pressed");
     }
 

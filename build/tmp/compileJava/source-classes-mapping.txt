@@ -1,12 +1,12 @@
-Tab2Controller.java
- Tab2Controller
-GridPaneController.java
- GridPaneController
 Tab1Controller.java
  Tab1Controller
+Main.java
+ Main
 Tab3Controller.java
  Tab3Controller
 Controller.java
  Controller
-Main.java
- Main
+GridPaneController.java
+ GridPaneController
+Tab2Controller.java
+ Tab2Controller
