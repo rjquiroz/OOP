@@ -1,3 +1,10 @@
+/**
+ * Represents main class for the OOP production project.
+ * It creates the initial window.
+ *
+ * @author Ronald Quiroz
+ */
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +23,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(root, 605, 400);
 
-        //scene.getStylesheets().add(getClass().getResource("demo.css").toExternalForm());
-
-        primaryStage.setTitle("FXML Welcome");
+        primaryStage.setTitle("OOP Production Project");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -1,8 +1,12 @@
+/**
+ * Represents the controller class for a sign in window that is not in used right now.
+ *
+ * @author Ronald Quiroz
+ */
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
 public class Controller {

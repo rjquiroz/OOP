@@ -26,15 +26,15 @@
         </rowConstraints>
         <children>
             <Label prefHeight="26.0" prefWidth="101.0" text="Product Name"/>
-            <TextField GridPane.columnIndex="1"/>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtNameField" GridPane.columnIndex="1"/>
+            <TextField fx:id="txtManufacturerField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
             <Label text="Manufacturer " GridPane.rowIndex="1"/>
             <Label text="Item " GridPane.rowIndex="2"/>
-            <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <ChoiceBox fx:id="chcType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
         </children>
     </GridPane>
-    <Button layoutX="93.0" layoutY="39.0" mnemonicParsing="false" text="Add Product"
-            onAction="#handleAddProductButtonAction"/>
+    <Button layoutX="93.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleAddProductButtonAction"
+            text="Add Product"/>
     <Label layoutX="400.0" layoutY="43.0" text="Existing Products"/>
     <TableView layoutX="346.0" layoutY="73.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
