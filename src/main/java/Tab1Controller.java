@@ -15,6 +15,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+
 public class Tab1Controller implements Initializable {
 
     @FXML
@@ -31,11 +32,10 @@ public class Tab1Controller implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resource) {
-
-        chcType.getItems().add("CELLPHONE");
-        chcType.getItems().add("TABLET");
-        chcType.getItems().add("AUDIO");
-        chcType.getItems().add("VIDEO");
+        //add the ItemType to the choiceBox in the first tab.
+        for (ItemType it : ItemType.values()) {
+            chcType.getItems().add(it + " " + it.code);
+        }
         chcType.getSelectionModel().selectFirst();
 
 
@@ -81,8 +81,8 @@ public class Tab1Controller implements Initializable {
              * Creates a random number between 1-100 and assign id to it
              * so each product added has an ID and the database can be sorted.
              */
-            double randNumber = Math.random();
-            int idRan = (int) (randNumber * 100) + 1;
+            //double randNumber = Math.random();
+            //int idRan = (int) (randNumber * 100) + 1;
 
             /**
              * takes the input from the user in tab 1 and stored
@@ -92,7 +92,7 @@ public class Tab1Controller implements Initializable {
             String txtManu = txtManufacturerField.getText();
             String txtType = chcType.getValue();
 
-            String insertSql = "INSERT INTO PRODUCT (id , name, type, manufacturer)values(?,?,?,?)";
+            String insertSql = "INSERT INTO PRODUCT (name, type, manufacturer)values(?,?,?)";
 
             PreparedStatement preparedStatement =
                     conn.prepareStatement(insertSql);
@@ -100,10 +100,10 @@ public class Tab1Controller implements Initializable {
             /**
              * insert the values read before in the database.
              */
-            preparedStatement.setInt(1, idRan);
-            preparedStatement.setString(2, txtId);
-            preparedStatement.setString(3, txtType);
-            preparedStatement.setString(4, txtManu);
+            //preparedStatement.setInt(1, idRan);
+            preparedStatement.setString(1, txtId);
+            preparedStatement.setString(2, txtType);
+            preparedStatement.setString(3, txtManu);
 
             preparedStatement.executeUpdate();
 
