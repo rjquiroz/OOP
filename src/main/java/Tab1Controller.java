@@ -5,18 +5,23 @@
  * @author Ronald Quiroz
  */
 
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
 
-public class Tab1Controller implements Initializable {
+public class Tab1Controller extends Controller implements Initializable {
 
     @FXML
     private TextField txtNameField;
@@ -26,6 +31,21 @@ public class Tab1Controller implements Initializable {
 
     @FXML
     private ChoiceBox<String> chcType;
+
+    @FXML
+    private TableView<Product> tableView;
+
+    @FXML
+    private TableColumn<?, ?> ProductIDCol;
+
+    @FXML
+    private TableColumn<?, ?> ProductNameCol;
+
+    @FXML
+    private TableColumn<?, ?> ManufacturerCol;
+
+    @FXML
+    private TableColumn<?, ?> ProductTypeCol;
 
     /**
      * initialize choiceBox with some values.
@@ -38,6 +58,16 @@ public class Tab1Controller implements Initializable {
         }
         chcType.getSelectionModel().selectFirst();
 
+        //instantiate the productLine List.
+        productLine = FXCollections.observableArrayList();
+
+        //set the column values of the tableView.
+        ProductIDCol.setCellValueFactory(new PropertyValueFactory("id"));
+        ProductNameCol.setCellValueFactory(new PropertyValueFactory("name"));
+        ManufacturerCol.setCellValueFactory(new PropertyValueFactory("Manufacturer"));
+        ProductTypeCol.setCellValueFactory(new PropertyValueFactory("type"));
+        //assign the values from the list to the table.
+        tableView.setItems(productLine);
 
     }
 
@@ -48,6 +78,34 @@ public class Tab1Controller implements Initializable {
     protected void handleAddProductButtonAction(ActionEvent event) {
         connectToDb();
 
+        setupProductLine();
+
+    }
+
+    public void setupProductLine() {
+        String txtName = txtNameField.getText();
+        String txtManu = txtManufacturerField.getText();
+        String txtType = chcType.getValue();
+        ItemType widgetType = ItemType.AUDIO;
+
+        //converts the String type gotten from the choiceBox to an ItemType.
+        switch (txtType) {
+            case "AUDIO AU":
+                widgetType = ItemType.AUDIO;
+                break;
+            case "VISUAL VI":
+                widgetType = ItemType.VISUAL;
+                break;
+            case "AUDIOMOBILE AM":
+                widgetType = ItemType.AUDIOMOBILE;
+                break;
+            case "VISUALMOBILE VM":
+                widgetType = ItemType.VISUALMOBILE;
+                break;
+        }
+
+        //add a product to the list.
+        productLine.add(new Widget(txtName, txtManu, widgetType));
     }
 
     /**
@@ -88,7 +146,7 @@ public class Tab1Controller implements Initializable {
              * takes the input from the user in tab 1 and stored
              * so we can insert it to the database later.
              */
-            String txtId = txtNameField.getText();
+            String txtName = txtNameField.getText();
             String txtManu = txtManufacturerField.getText();
             String txtType = chcType.getValue();
 
@@ -101,7 +159,7 @@ public class Tab1Controller implements Initializable {
              * insert the values read before in the database.
              */
             //preparedStatement.setInt(1, idRan);
-            preparedStatement.setString(1, txtId);
+            preparedStatement.setString(1, txtName);
             preparedStatement.setString(2, txtType);
             preparedStatement.setString(3, txtManu);
 
@@ -116,6 +174,7 @@ public class Tab1Controller implements Initializable {
             /**
              * Prints the entire database to the system console.
              */
+
             while (rs.next()) {
                 //rs.next();
                 String prdId = rs.getString(1);
@@ -138,6 +197,5 @@ public class Tab1Controller implements Initializable {
 
 
     }
-
 
 }

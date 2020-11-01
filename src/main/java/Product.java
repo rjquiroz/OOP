@@ -1,6 +1,6 @@
 public abstract class Product implements Item {
     int id;
-    String type;
+    ItemType type;
     String manufacturer;
     String name;
 
@@ -8,7 +8,7 @@ public abstract class Product implements Item {
 
     }
 
-    public Product(String name, String manufacturer, String type) {
+    public Product(String name, String manufacturer, ItemType type) {
         this.name = name;
         this.manufacturer = manufacturer;
         this.type = type;
@@ -32,6 +32,14 @@ public abstract class Product implements Item {
 
     public String getManufacturer() {
         return manufacturer;
+    }
+
+    public void setType(ItemType type) {
+        this.type = type;
+    }
+
+    public ItemType getType() {
+        return type;
     }
 
     public String toString() {
