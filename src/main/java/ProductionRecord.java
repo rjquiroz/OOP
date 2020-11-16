@@ -1,138 +1,151 @@
 import java.util.Date;
 
+/**
+ * Represents a ProductionRecord that will be store in the database PRODUCTIONRECORD.
+ * A ProductionRecord have an name and id of the product, productionNumber, serialNumber
+ * and dateProduced.
+ * @author Ronald Quiroz
+ */
 public class ProductionRecord {
-    String name = "";
-    int productionNumber;
-    int productID;
-    String serialNumber = " ";
-    Date dateProduced;
-    //I made this diff. counts so I can keep count of how many products of each type are there.
-    // so I can increment serial number properly.
-    static int countAU = 0, countVI = 0, countAM = 0, countVM = 0;
+  String name = "";
+  int productionNumber;
+  int productID;
+  String serialNumber = " ";
+  Date dateProduced;
+  //I made this diff. counts so I can keep count of how many products of each type are there.
+  // so I can increment serial number properly.
 
-    public ProductionRecord() {
+  /**
+   * Default constructor for ProductionRecord.
+   */
+  public ProductionRecord() {
+    dateProduced = new Date();
+  }
 
+  /**
+   * Just like the default constructor, but assigning the id of the product.
+   * @param productID which will be the id of the product.
+   */
+  public ProductionRecord(int productID) {
+    this.productID = productID;
+    productionNumber = 0;
+    serialNumber = "0";
+    dateProduced = new Date();
+  }
+
+  /**
+   * Constructor to assign values to the fields of a ProductionRecord.
+   * @param productionNumber which is the number on the list of production.
+   * @param productID which is the id of the product.
+   * @param serialNumber which will be the unique serialNumber of each product produced.
+   * @param dateProduced which will be the date in which the product was produced.
+   */
+  public ProductionRecord(int productionNumber, int productID, String serialNumber,
+                          Date dateProduced) {
+    this.productionNumber = productionNumber;
+    this.productID = productID;
+    this.serialNumber = serialNumber;
+    this.dateProduced = dateProduced;
+  }
+
+  /**
+   * Constructor to assign values to the productionRecord.
+   * @param product which will be the product that will be produced.
+   * @param itemCount which will be count of how many products of this
+   *                  type have been produced before.
+   */
+  public ProductionRecord(Product product, int itemCount) {
+    //String with zeros to fill in the serialNumber.
+    String numberPart = "00000";
+    dateProduced = new Date();
+    name = product.name;
+    productID = product.id;
+
+    //if else statements to decide how many zeros goes before the actual count.
+    if (String.valueOf(itemCount).length() == 1) {
+      numberPart = "0000" + itemCount;
+    } else if (String.valueOf(itemCount).length() == 2) {
+      numberPart = "000" + itemCount;
+    } else if (String.valueOf(itemCount).length() == 3) {
+      numberPart = "00" + itemCount;
+    } else if (String.valueOf(itemCount).length() == 4) {
+      numberPart = "0" + itemCount;
+    } else if (String.valueOf(itemCount).length() == 5) {
+      numberPart = "" + itemCount;
     }
 
-    public ProductionRecord(int productID) {
-        this.productID = productID;
-        productionNumber = 0;
-        serialNumber = "0";
-        dateProduced = new Date();
-    }
+    //assign the proper serial number. using subString.
+    serialNumber = product.manufacturer.substring(0, 3) + product.type.code + numberPart;
+  }
 
-    public ProductionRecord(int productionNumber, int productID, String serialNumber, Date dateProduced) {
-        this.productionNumber = productionNumber;
-        this.productID = productID;
-        this.serialNumber = serialNumber;
-        this.dateProduced = dateProduced;
-    }
+  /**
+   * gets access to the productionNumber.
+   * returns an int.
+   */
+  public int getProductionNumber() {
+    return productionNumber;
+  }
 
-    public ProductionRecord(Product product, int itemCount) {
-        //String with zeros to fill in the serialNumber.
-        String numberPart = "00000";
-        productionNumber = itemCount;
-        dateProduced = new Date();
-        name = product.name;
-        productID = product.id;
+  /**
+   * makes available to change the productionNumber of the product.
+   */
+  public void setProductionNumber(int productionNumber) {
+    this.productionNumber = productionNumber;
+  }
 
-        //switch to decide to which count I have to sum. depending the ItemType of the product.
-        //it also decides how many 0 to include base on the digits of the count.
-        switch (product.type.code) {
-            case "AU":
-                countAU++;
-                if (String.valueOf(countAU).length() == 1)
-                    numberPart = "0000" + countAU;
-                else if (String.valueOf(countAU).length() == 2)
-                    numberPart = "000" + countAU;
-                else if (String.valueOf(countAU).length() == 3)
-                    numberPart = "00" + countAU;
-                else if (String.valueOf(countAU).length() == 4)
-                    numberPart = "0" + countAU;
-                else if (String.valueOf(countAU).length() == 5)
-                    numberPart = "" + countAU;
-                break;
-            case "VI":
-                countVI++;
-                if (String.valueOf(countVI).length() == 1)
-                    numberPart = "0000" + countVI;
-                else if (String.valueOf(countVI).length() == 2)
-                    numberPart = "000" + countVI;
-                else if (String.valueOf(countVI).length() == 3)
-                    numberPart = "00" + countVI;
-                else if (String.valueOf(countVI).length() == 4)
-                    numberPart = "0" + countVI;
-                else if (String.valueOf(countVI).length() == 5)
-                    numberPart = "" + countVI;
-                break;
-            case "AM":
-                countAM++;
-                if (String.valueOf(countAM).length() == 1)
-                    numberPart = "0000" + countAM;
-                else if (String.valueOf(countAM).length() == 2)
-                    numberPart = "000" + countAM;
-                else if (String.valueOf(countAM).length() == 3)
-                    numberPart = "00" + countAM;
-                else if (String.valueOf(countAM).length() == 4)
-                    numberPart = "0" + countAM;
-                else if (String.valueOf(countAM).length() == 5)
-                    numberPart = "" + countAM;
-                break;
-            case "VM":
-                countVM++;
-                if (String.valueOf(countVM).length() == 1)
-                    numberPart = "0000" + countVM;
-                else if (String.valueOf(countVM).length() == 2)
-                    numberPart = "000" + countVM;
-                else if (String.valueOf(countVM).length() == 3)
-                    numberPart = "00" + countVM;
-                else if (String.valueOf(countVM).length() == 4)
-                    numberPart = "0" + countVM;
-                else if (String.valueOf(countVM).length() == 5)
-                    numberPart = "" + countVM;
-                break;
-        }
-//assign the proper serial number. using subString.
-        serialNumber = product.manufacturer.substring(0, 3) + product.type.code + numberPart;
-    }
+  /**
+   * gets access to the productID.
+   * returns an int.
+   */
+  public int getProductionID() {
+    return productID;
+  }
 
+  /**
+   * makes available to change the productID.
+   */
+  public void setProductID(int productID) {
+    this.productID = productID;
+  }
 
-    public int getProductionNumber() {
-        return productionNumber;
-    }
+  /**
+   * gets access to the serialNumber of the product.
+   * returns a String.
+   */
+  public String getSerialNumber() {
+    return serialNumber;
+  }
 
-    public void setProductionNumber(int productionNumber) {
-        this.productionNumber = productionNumber;
-    }
+  /**
+   * makes available to change the serialNumber of the product.
+   */
+  public void setSerialNumber(String serialNumber) {
+    this.serialNumber = serialNumber;
+  }
 
-    public int getProductionID() {
-        return productID;
-    }
+  /**
+   * gets access to the date in which the product was produced.
+   * returns a Date.
+   */
+  public Date getDateProduced() {
+    return dateProduced;
+  }
 
-    public void setProductID(int productID) {
-        this.productID = productID;
-    }
+  /**
+   * makes available to change the date in which the product was produced.
+   */
+  public void setDateProduced(Date dateProduced) {
+    this.dateProduced = dateProduced;
+  }
 
-    public String getSerialNumber() {
-        return serialNumber;
-    }
-
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public Date getDateProduced() {
-        return dateProduced;
-    }
-
-    public void setDateProduced(Date dateProduced) {
-        this.dateProduced = dateProduced;
-    }
-
-    //prints the fields.
-    public String toString() {
-        return "Prod. Num: " + productionNumber + " Product name: " + name + " Serial Num: " + serialNumber + " Date: " + dateProduced;
-    }
+  /**
+   * Prints out the description of every field and data of a ProductionRecord.
+   * returns a String.
+   */
+  public String toString() {
+    return "Prod. Num: " + productionNumber + " Product ID: " + productID + " Serial Num: "
+            + serialNumber + " Date: " + dateProduced;
+  }
 
 
 }

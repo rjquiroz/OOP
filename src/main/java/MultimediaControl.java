@@ -1,11 +1,15 @@
+/**
+ * Interface that represents the multimedia controls of a moviePlayer.
+ * @author Ronald Quiroz
+ */
 public interface MultimediaControl {
 
-    public void play();
+  void play();
 
-    public void stop();
+  void stop();
 
-    public void previous();
+  void previous();
 
-    public void next();
+  void next();
 
 }

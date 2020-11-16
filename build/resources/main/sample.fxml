@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import java.net.*?>
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
 
 <AnchorPane fx:controller="Controller"
             xmlns:fx="http://javafx.com/fxml">
-    <children>
-        <TabPane>
-            <Tab fx:id="tab1" text="Product Line">
-                <fx:include source="Tab1.fxml"/>
-            </Tab>
+    <TabPane>
+        <Tab fx:id="tab1" text="Product Line">
+            <fx:include source="Tab1.fxml"/>
+        </Tab>
 
-            <Tab fx:id="tab2" text="Produce">
-                <fx:include source="Tab2.fxml"/>
-            </Tab>
+        <Tab fx:id="tab2" text="Produce">
+            <fx:include source="Tab2.fxml"/>
+        </Tab>
 
-            <Tab fx:id="tab3" text="Production Log">
-                <fx:include source="Tab3.fxml"/>
-            </Tab>
+        <Tab fx:id="tab3" text="Production Log">
+            <fx:include source="Tab3.fxml"/>
+        </Tab>
 
-        </TabPane>
-    </children>
+    </TabPane>
 </AnchorPane>
 
 

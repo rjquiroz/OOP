@@ -16,5 +16,4 @@
     <Button layoutX="74.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleRecordProductionButtonAction"
             text="Record Production"/>
 
-
 </AnchorPane>

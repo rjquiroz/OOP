@@ -1,13 +1,18 @@
+/**
+ * Represents an Item created in the production project.
+ * An Item have a name, id and manufacturer.
+ * @author Ronald Quiroz
+ */
 public interface Item {
 
-    public int getId();
+  int getId();
 
-    public void setName(String name);
+  void setName(String name);
 
-    public String getName();
+  String getName();
 
-    public void setManufacturer(String manufacturer);
+  void setManufacturer(String manufacturer);
 
-    public String getManufacturer();
+  String getManufacturer();
 
 }

@@ -1,47 +1,49 @@
-/**
- * Represents the controller class for a sign in window that is not in used right now.
- *
- * @author Ronald Quiroz
- */
-
-import javafx.collections.FXCollections;
+import java.util.ArrayList;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
+import javafx.fxml.FXML;
+import javafx.scene.control.Tab;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
+/**
+ *Represents the controller of the main window of the program.
+ *@author Ronald Quiroz
+ */
 public class Controller {
 
-    @FXML
-    private Label lblOutput;
+  public Tab tab1;
+  public Tab tab2;
+  public Tab tab3;
 
-    //list to add the products and show them in the tableview and listView
-    public static ObservableList<Product> productLine;
+  //list to add the products and show them in the tableview and listView
+  public static ObservableList<Product> productLine;
 
-    //arrayList of product so I can select multiples products to produce from the listView.
-    public static ArrayList<Product> productSelected = new ArrayList<Product>();
+  //A variable to store the product selected from the list view.
+  public static Product productSelected = new Widget();
 
-    //array of integer so I can have a diff. int for each product in the arrayList of products.
-    public static ArrayList<Integer> num = new ArrayList<Integer>();
+  //the value selected in the comboBox tab2
+  public static int quantityProduced = 0;
 
-    public void sayHello() {
-        lblOutput.setText("Hello FXML!");
+  //counters used to follow the count of different types for the serial number.
+  public static int countAU = 0;
+  public static int countVI = 0;
+  public static int countAM = 0;
+  public static int countVM = 0;
 
-    }
+  //counter to follow the production count.
+  public static int productNum = 1;
 
-    @FXML
-    private Text actiontarget;
+  //arrayList that is used to add to the database PRODUCTIONRECORD.
+  public static final ArrayList<ProductionRecord> productionLog = new ArrayList<>();
 
-    @FXML
-    protected void handleSubmitButtonAction(ActionEvent event) {
-        actiontarget.setText("Sign in button pressed");
-    }
+
+  @FXML
+  private Text actiontarget;
+
+  @FXML
+  protected void handleSubmitButtonAction(ActionEvent event) {
+    actiontarget.setText("Sign in button pressed");
+  }
 
 
 }

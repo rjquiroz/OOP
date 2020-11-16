@@ -16,26 +16,24 @@
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="98.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="102.0" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="102.0" />
-         <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="116.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="102.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="116.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
-         <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
-         <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
         </rowConstraints>
-        <children>
-            <Label prefHeight="26.0" prefWidth="101.0" text="Product Name" />
-            <TextField fx:id="txtNameField" prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="3" />
-            <TextField fx:id="txtManufacturerField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Label text="Manufacturer " GridPane.rowIndex="1" />
-            <Label text="Item " GridPane.rowIndex="2" />
-            <ChoiceBox fx:id="chcType" prefHeight="25.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-        </children>
+        <Label prefHeight="26.0" prefWidth="101.0" text="Product Name" />
+        <TextField fx:id="txtNameField" prefHeight="25.0" prefWidth="184.0" GridPane.columnIndex="3" />
+        <TextField fx:id="txtManufacturerField" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label text="Manufacturer " GridPane.rowIndex="1" />
+        <Label text="Item " GridPane.rowIndex="2" />
+        <ChoiceBox fx:id="chcType" prefHeight="25.0" prefWidth="206.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
     </GridPane>
     <Button layoutX="449.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleAddProductButtonAction" text="Add Product" />
     <Label layoutX="22.0" layoutY="149.0" text="Existing Products" />
-    <TableView fx:id="tableView" layoutX="22.0" layoutY="180.0" prefHeight="200.0" prefWidth="510.0">
+    <TableView fx:id="tableView" layoutX="22.0" layoutY="180.0" prefHeight="187.0" prefWidth="510.0">
         <columns>
             <TableColumn fx:id="ProductIDCol" prefWidth="75.0" text="Product ID" />
             <TableColumn fx:id="ProductNameCol" prefWidth="103.0" text="Product Name" />

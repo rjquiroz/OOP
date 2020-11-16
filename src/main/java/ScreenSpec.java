@@ -1,9 +1,13 @@
+/**
+ * Interface that represents the Screen specifications of a new Screen.
+ * @author Ronald Quiroz
+ */
 public interface ScreenSpec {
 
-    public String getResolution();
+  String getResolution();
 
-    public int getRefreshRate();
+  int getRefreshRate();
 
-    public int getResponseTime();
+  int getResponseTime();
 
 }
