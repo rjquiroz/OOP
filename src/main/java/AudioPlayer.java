@@ -1,5 +1,6 @@
 /**
  * class that extends MultimediaControl interface.
+ *
  * @author Ronald Quiroz
  */
 public class AudioPlayer extends Product implements MultimediaControl {
@@ -9,9 +10,10 @@ public class AudioPlayer extends Product implements MultimediaControl {
 
   /**
    * Constructor to set every field of this and the super class.
-   * @param name name of the product.
-   * @param manufacturer name of the manufacturer of the product.
-   * @param supportedAudioFormats the types of audio formats supported.
+   *
+   * @param name                     name of the product.
+   * @param manufacturer             name of the manufacturer of the product.
+   * @param supportedAudioFormats    the types of audio formats supported.
    * @param supportedPlaylistFormats types of playlist formats supported.
    */
   public AudioPlayer(String name, String manufacturer, String supportedAudioFormats,

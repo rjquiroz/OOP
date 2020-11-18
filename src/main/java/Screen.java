@@ -2,6 +2,7 @@
  * Represents a Screen for moviePlayers.
  * It implements the interface ScreenSpec.
  * A Screen has a String resolution, int refreshRate, int responseTime as fields.
+ *
  * @author Ronald Quiroz
  */
 public class Screen implements ScreenSpec {
@@ -19,8 +20,9 @@ public class Screen implements ScreenSpec {
 
   /**
    * Constructor to assign values to the fields of a new Screen.
-   * @param resolution for the resolution of a new Screen.
-   * @param refreshRate an int for the refreshRate of the Screen
+   *
+   * @param resolution   for the resolution of a new Screen.
+   * @param refreshRate  an int for the refreshRate of the Screen
    * @param responseTime an int for the responseTime of the Screen.
    */
   public Screen(String resolution, int refreshRate, int responseTime) {

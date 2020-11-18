@@ -2,6 +2,7 @@
  * Represents a Product that will be created and added to the database.
  * Implements the interface Item.
  * A Product have an id, name, manufacturer, and type.
+ *
  * @author Ronald Quiroz
  */
 public abstract class Product implements Item {
@@ -19,9 +20,10 @@ public abstract class Product implements Item {
 
   /**
    * Constructor to assign values to the fields of a Product.
-   * @param name assign the name of the product.
+   *
+   * @param name         assign the name of the product.
    * @param manufacturer assign the name of the manufacturer of the Product.
-   * @param type assign type to the Product from the enum.
+   * @param type         assign type to the Product from the enum.
    */
   public Product(String name, String manufacturer, ItemType type) {
     this.name = name;
@@ -31,10 +33,11 @@ public abstract class Product implements Item {
 
   /**
    * Constructor to assign values to the fields of a Product.
-   * @param id assign id to the Product.
-   * @param name assign the name of the product.
+   *
+   * @param id           assign id to the Product.
+   * @param name         assign the name of the product.
    * @param manufacturer assign the name of the manufacturer of the Product.
-   * @param type assign type to the Product from the enum.
+   * @param type         assign type to the Product from the enum.
    */
   public Product(int id, String name, String manufacturer, ItemType type) {
     this.id = id;

@@ -1,6 +1,7 @@
 /**
  * Represents main class for the OOP production project.
  * It creates the initial window.
+ *
  * @author Ronald Quiroz
  */
 

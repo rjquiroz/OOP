@@ -4,6 +4,7 @@ import java.util.Date;
  * Represents a ProductionRecord that will be store in the database PRODUCTIONRECORD.
  * A ProductionRecord have an name and id of the product, productionNumber, serialNumber
  * and dateProduced.
+ *
  * @author Ronald Quiroz
  */
 public class ProductionRecord {
@@ -24,6 +25,7 @@ public class ProductionRecord {
 
   /**
    * Just like the default constructor, but assigning the id of the product.
+   *
    * @param productID which will be the id of the product.
    */
   public ProductionRecord(int productID) {
@@ -35,10 +37,11 @@ public class ProductionRecord {
 
   /**
    * Constructor to assign values to the fields of a ProductionRecord.
+   *
    * @param productionNumber which is the number on the list of production.
-   * @param productID which is the id of the product.
-   * @param serialNumber which will be the unique serialNumber of each product produced.
-   * @param dateProduced which will be the date in which the product was produced.
+   * @param productID        which is the id of the product.
+   * @param serialNumber     which will be the unique serialNumber of each product produced.
+   * @param dateProduced     which will be the date in which the product was produced.
    */
   public ProductionRecord(int productionNumber, int productID, String serialNumber,
                           Date dateProduced) {
@@ -50,7 +53,8 @@ public class ProductionRecord {
 
   /**
    * Constructor to assign values to the productionRecord.
-   * @param product which will be the product that will be produced.
+   *
+   * @param product   which will be the product that will be produced.
    * @param itemCount which will be count of how many products of this
    *                  type have been produced before.
    */

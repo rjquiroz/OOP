@@ -1,6 +1,7 @@
 /**
  * Represents a MoviePlayer that can play, stop, go to the previous or next song.
  * Implements the interface MultimediaControl.
+ *
  * @author Ronald Quiroz
  */
 public class MoviePlayer extends Product implements MultimediaControl {
@@ -10,10 +11,11 @@ public class MoviePlayer extends Product implements MultimediaControl {
 
   /**
    * Constructor to assign values to the fields of a moviePlayer and a Product.
-   * @param name assign the name of the product.
+   *
+   * @param name         assign the name of the product.
    * @param manufacturer assign the name of the manufacturer of the Product.
-   * @param screen assign the Screen to the MoviePlayer of type Product.
-   * @param monitorType assign the type of monitor to the MoviePlayer of type Product.
+   * @param screen       assign the Screen to the MoviePlayer of type Product.
+   * @param monitorType  assign the type of monitor to the MoviePlayer of type Product.
    */
   public MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
     super(name, manufacturer, ItemType.VISUAL);

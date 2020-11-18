@@ -1,6 +1,7 @@
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
+
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 /**
  * Class that is used to control everything within the Tab1 'Product Line'.
  * It extends the main controller in which all tabs are located.
+ *
  * @author Ronald Quiroz
  */
 @SuppressWarnings("ALL")

@@ -18,6 +18,10 @@
             <fx:include source="Tab3.fxml"/>
         </Tab>
 
+        <Tab fx:id="tab4" text="Employee">
+            <fx:include source="Tab4.fxml"/>
+        </Tab>
+
     </TabPane>
 </AnchorPane>
 

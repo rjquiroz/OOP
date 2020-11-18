@@ -1,5 +1,6 @@
 /**
  * Interface that represents the multimedia controls of a moviePlayer.
+ *
  * @author Ronald Quiroz
  */
 public interface MultimediaControl {

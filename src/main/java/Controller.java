@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,8 +7,9 @@ import javafx.scene.control.Tab;
 import javafx.scene.text.Text;
 
 /**
- *Represents the controller of the main window of the program.
- *@author Ronald Quiroz
+ * Represents the controller of the main window of the program.
+ *
+ * @author Ronald Quiroz
  */
 public class Controller {
 

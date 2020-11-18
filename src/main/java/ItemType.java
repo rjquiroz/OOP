@@ -1,6 +1,7 @@
 /**
  * Represents the type of the Item created.
  * there are 4 types: AUDIO, VISUAL, AUDIOMOBILE, VISUALMOBILE.
+ *
  * @author Ronald Quiroz
  */
 @SuppressWarnings("ALL")
