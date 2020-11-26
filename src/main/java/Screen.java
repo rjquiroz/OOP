@@ -5,6 +5,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public class Screen implements ScreenSpec {
 
   String resolution;

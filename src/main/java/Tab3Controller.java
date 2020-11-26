@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
@@ -23,6 +24,8 @@ public class Tab3Controller extends Controller implements Initializable {
   @FXML
   private TextArea textArea;
 
+  @FXML
+  private Button refreshLog;
 
   /**
    * initialize the textBox with products that have been produced before.

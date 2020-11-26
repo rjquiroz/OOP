@@ -12,6 +12,6 @@
     <Label layoutX="390.0" layoutY="60.0" text="Choose Quantity" />
     <ComboBox fx:id="cmbQuantity" layoutX="343.0" layoutY="85.0" prefWidth="150.0" />
     <Button fx:id="recordButton" layoutX="74.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleRecordProductionButtonAction" text="Record Production" />
-   <Label fx:id="productRecordMessage" layoutX="74.0" layoutY="345.0" text="The product was succesfully produced and recorded!" textFill="#000dff" visible="false" />
+   <Label fx:id="productRecordMessage" layoutX="74.0" layoutY="345.0" text="The product was successfully produced and recorded!" textFill="#000dff" visible="false" />
 
 </AnchorPane>

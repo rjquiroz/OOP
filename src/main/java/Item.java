@@ -3,6 +3,7 @@
  * An Item have a name, id and manufacturer.
  * @author Ronald Quiroz
  */
+@SuppressWarnings({"ALL", "unused"})
 public interface Item {
 
   int getId();

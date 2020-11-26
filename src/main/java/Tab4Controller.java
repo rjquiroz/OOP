@@ -37,6 +37,9 @@ public class Tab4Controller extends Controller implements Initializable {
   @FXML
   private Button signInButton;
 
+  @FXML
+  private Button HelpButton;
+
   /**
    * initialize the tab4.
    */
