@@ -4,6 +4,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public class MoviePlayer extends Product implements MultimediaControl {
 
   final Screen screen;
@@ -59,7 +60,8 @@ public class MoviePlayer extends Product implements MultimediaControl {
 
   /**
    * Prints out the description of every field and data of the MoviePlayer.
-   * returns a String.
+   *
+   * @return a String printing the description.
    */
   public String toString() {
     return super.toString() + "Screen: \nResolution: " + screen.resolution + "\nRefresh Rate: "

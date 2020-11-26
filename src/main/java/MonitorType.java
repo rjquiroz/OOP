@@ -4,6 +4,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public enum MonitorType {
 
   LCD, LED

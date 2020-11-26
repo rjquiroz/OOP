@@ -33,7 +33,8 @@ public class Screen implements ScreenSpec {
 
   /**
    * gets access to the resolution of the Screen.
-   * returns a String.
+   *
+   * @return String resolution.
    */
   @Override
   public String getResolution() {
@@ -42,7 +43,8 @@ public class Screen implements ScreenSpec {
 
   /**
    * gets access to the refreshRate of the Screen.
-   * returns an int.
+   *
+   * @return int refreshRate.
    */
   @Override
   public int getRefreshRate() {
@@ -51,7 +53,8 @@ public class Screen implements ScreenSpec {
 
   /**
    * gets access to the responseTime of the Screen.
-   * returns an int.
+   *
+   * @return responseTime.
    */
   @Override
   public int getResponseTime() {
@@ -60,7 +63,8 @@ public class Screen implements ScreenSpec {
 
   /**
    * Prints out the description of every field and data of the Screen.
-   * returns a String.
+   *
+   * @return String description.
    */
   public String toString() {
     return "Screen: \nResolution: " + resolution + "\nRefresh Rate: " + refreshRate

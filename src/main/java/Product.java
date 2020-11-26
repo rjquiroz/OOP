@@ -5,6 +5,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public abstract class Product implements Item {
   int id;
   ItemType type;
@@ -48,7 +49,8 @@ public abstract class Product implements Item {
 
   /**
    * gets access to the id of the Product.
-   * returns an int.
+   *
+   * @return int id of product.
    */
   public int getId() {
     return id;
@@ -56,6 +58,8 @@ public abstract class Product implements Item {
 
   /**
    * makes available to change the name of the Product.
+   *
+   * @param name name of product.
    */
   public void setName(String name) {
     this.name = name;
@@ -63,7 +67,8 @@ public abstract class Product implements Item {
 
   /**
    * gets access to the name of the Product.
-   * returns a String.
+   *
+   * @return string name of product.
    */
   public String getName() {
     return name;
@@ -71,6 +76,8 @@ public abstract class Product implements Item {
 
   /**
    * makes available to change the manufacturer of the Product.
+   *
+   * @param manufacturer manufacturer of product.
    */
   public void setManufacturer(String manufacturer) {
     this.manufacturer = manufacturer;
@@ -78,7 +85,8 @@ public abstract class Product implements Item {
 
   /**
    * gets access to the manufacturer of the Product.
-   * returns a String.
+   *
+   * @return a String manufacturer.
    */
   public String getManufacturer() {
     return manufacturer;
@@ -86,6 +94,8 @@ public abstract class Product implements Item {
 
   /**
    * makes available to change the type of the Product.
+   *
+   * @param type type of product.
    */
   public void setType(ItemType type) {
     this.type = type;
@@ -93,7 +103,8 @@ public abstract class Product implements Item {
 
   /**
    * gets access to the type of the Product.
-   * returns a ItemType.
+   *
+   * @return the ItemType of the product.
    */
   public ItemType getType() {
     return type;
@@ -101,7 +112,8 @@ public abstract class Product implements Item {
 
   /**
    * Prints out the description of every field and data of the Product.
-   * returns a String.
+   *
+   * @return a String description.
    */
   public String toString() {
     return "Name: " + name + "\nManufacturer: " + manufacturer + "\nType: " + type;

@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public class GridPaneController implements Initializable {
   @Override
   public void initialize(URL location, ResourceBundle resource) {

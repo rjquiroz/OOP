@@ -3,6 +3,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public interface ScreenSpec {
 
   String getResolution();

@@ -7,7 +7,8 @@ import java.util.Date;
  *
  * @author Ronald Quiroz
  */
-public class ProductionRecord {
+@SuppressWarnings("ALL")
+public class ProductionRecord extends Controller {
   String name = "";
   int productionNumber;
   int productID;
@@ -59,6 +60,8 @@ public class ProductionRecord {
    *                  type have been produced before.
    */
   public ProductionRecord(Product product, int itemCount) {
+    productNum++;
+    productionNumber = productNum;
     //String with zeros to fill in the serialNumber.
     String numberPart = "00000";
     dateProduced = new Date();
@@ -84,7 +87,8 @@ public class ProductionRecord {
 
   /**
    * gets access to the productionNumber.
-   * returns an int.
+   *
+   * @return int productionNumber.
    */
   public int getProductionNumber() {
     return productionNumber;
@@ -92,6 +96,8 @@ public class ProductionRecord {
 
   /**
    * makes available to change the productionNumber of the product.
+   *
+   * @param productionNumber productionNumber.
    */
   public void setProductionNumber(int productionNumber) {
     this.productionNumber = productionNumber;
@@ -99,7 +105,8 @@ public class ProductionRecord {
 
   /**
    * gets access to the productID.
-   * returns an int.
+   *
+   * @return int productID.
    */
   public int getProductionID() {
     return productID;
@@ -107,6 +114,8 @@ public class ProductionRecord {
 
   /**
    * makes available to change the productID.
+   *
+   * @param productID id of product.
    */
   public void setProductID(int productID) {
     this.productID = productID;
@@ -114,7 +123,8 @@ public class ProductionRecord {
 
   /**
    * gets access to the serialNumber of the product.
-   * returns a String.
+   *
+   * @return String serialNumber.
    */
   public String getSerialNumber() {
     return serialNumber;
@@ -122,6 +132,8 @@ public class ProductionRecord {
 
   /**
    * makes available to change the serialNumber of the product.
+   *
+   * @param serialNumber serialNumber of product.
    */
   public void setSerialNumber(String serialNumber) {
     this.serialNumber = serialNumber;
@@ -129,7 +141,8 @@ public class ProductionRecord {
 
   /**
    * gets access to the date in which the product was produced.
-   * returns a Date.
+   *
+   * @return dateProduced.
    */
   public Date getDateProduced() {
     return dateProduced;
@@ -137,17 +150,27 @@ public class ProductionRecord {
 
   /**
    * makes available to change the date in which the product was produced.
+   *
+   * @param dateProduced date which product was produced.
    */
   public void setDateProduced(Date dateProduced) {
     this.dateProduced = dateProduced;
   }
 
   /**
+   * Goes over the list of products checking if the ID matches so it can replace the id
+   * for the name when printing in tab3.
    * Prints out the description of every field and data of a ProductionRecord.
-   * returns a String.
+   *
+   * @return String description.
    */
   public String toString() {
-    return "Prod. Num: " + productionNumber + " Product ID: " + productID + " Serial Num: "
+    for (Product product : productsDB) {
+      if (productID == product.id) {
+        name = product.name;
+      }
+    }
+    return "Prod. Num: " + productionNumber + " Product Name: " + name + " Serial Num: "
             + serialNumber + " Date: " + dateProduced;
   }
 

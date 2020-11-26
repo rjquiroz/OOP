@@ -1,7 +1,6 @@
 /**
  * Represents an Item created in the production project.
  * An Item have a name, id and manufacturer.
- *
  * @author Ronald Quiroz
  */
 public interface Item {

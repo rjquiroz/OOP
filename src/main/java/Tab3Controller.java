@@ -1,82 +1,75 @@
-/*
-  Represents tab 3 for the OOP production project.
-  It gives format to tab 3, doesnt do anything yet.
-
-  @author Ronald Quiroz
- */
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
+/**
+ * Represents tab 3 for the OOP production project.
+ * It gives format to tab 3 with a production Log textBox.
+ * Every single product that was produced will be found here.
+ * Has a refresh button to refresh the tab.
+ *
+ * @author Ronald Quiroz
+ */
 public class Tab3Controller extends Controller implements Initializable {
 
-  public Button RefreshLog;
+  @FXML
+  private Label noChangesMessage;
+
   @FXML
   private TextArea textArea;
 
+
+  /**
+   * initialize the textBox with products that have been produced before.
+   */
   @Override
   public void initialize(URL location, ResourceBundle resource) {
 
-    //couldn't figure out how to print the productionRecord to string here after the bottom was click.
-    //so I prompt the user to refresh the by clicking the bottom, so that way once a product is added is
-    //when we start productRecording.
-    // textArea.setText("There have not been added any products. try refreshing! ");
+    //loads and appends from the RecordProduct database to textBox.
     showProduction();
-
-
   }
 
+  /**
+   * happens when the Refresh button is clicked.
+   * gets data from the array created in tab2 and used to create a a new productionRecord
+   * that will be append to the textBox.
+   *
+   * @param event when clicked.
+   */
   @FXML
   protected void handleRefreshLog(ActionEvent event) {
-    int proNumber = productNum - quantityProduced + 1;
+    if (isThereAProductSelected) {
+      //hides the message label.
+      noChangesMessage.setVisible(false);
 
-    switch (productSelected.type) {
-      case AUDIO:
-        countAU = countAU - quantityProduced;
-        break;
-      case VISUAL:
-        countVI = countVI - quantityProduced;
-        break;
-      case AUDIOMOBILE:
-        countAM = countAM - quantityProduced;
-        break;
-      case VISUALMOBILE:
-        countVM = countVM - quantityProduced;
-        break;
-    }
+      if (lastAdded.equals("")) {
 
-    //create a new productionRecord and assign the correct count depending on type of the productSelected.
-    ProductionRecord productProduced;
-    for (int produceRecord = 1; produceRecord <= quantityProduced; produceRecord++) {
+        //prints every new productionRecord to the textBox.
+        for (ProductionRecord p : productionL) {
+          textArea.appendText(p.toString() + "\n");
+        }
+        //clear the array so doesnt repeat itself.
+        productionL.clear();
 
-      if (productSelected.type.equals(ItemType.AUDIO)) {
-        countAU++;
-        productProduced = new ProductionRecord(productSelected, countAU);
-      } else if (productSelected.type.equals(ItemType.VISUAL)) {
-        countVI++;
-        productProduced = new ProductionRecord(productSelected, countVI);
-      } else if (productSelected.type.equals(ItemType.AUDIOMOBILE)) {
-        countAM++;
-        productProduced = new ProductionRecord(productSelected, countAM);
       } else {
-        countVM++;
-        productProduced = new ProductionRecord(productSelected, countVM);
+        //makes the message visible if there are no changes.
+        noChangesMessage.setVisible(true);
       }
-      productProduced.productionNumber = proNumber++;
-      textArea.appendText(productProduced.toString() + "\n");
+    } else {
+      //makes the message visible if there are no changes.
+      noChangesMessage.setVisible(true);
     }
-
-
   }
 
+  /**
+   * adds the array that was filled from the database of ProductionRecord to the textBox.
+   */
   public void showProduction() {
-
 
     for (ProductionRecord p : productionLog) {
       textArea.appendText(p.toString() + "\n");

@@ -26,30 +26,29 @@ public class Employee {
    *
    * @param name     that will be the full name of a new Employee provided by him.
    * @param password that will be the password provided by the same new Employee.
-   *                 This constructor will check with the other methods that the name and password are valid
+   *                 This constructor will check with the other methods that the name
+   *                 and password are valid
    *                 and then will assign the username and email based off that.
    */
   public Employee(String name, String password) {
     //needed to assign name to this.name.
-    StringBuilder sb = new StringBuilder(name);
-    this.name = sb;
+    this.name = new StringBuilder(name);
 
     //if name is valid (has white spaces) will assign the username and email.
+    //if not valid will give a default username and email.
     if (checkName(name)) {
       setUsername(name);
       setEmail(name);
-    }
-    //if not valid will give a default username and email.
-    else {
+    } else {
       username = "default";
       email = "user@oracleacademy.Test";
     }
+
     //will use the same password if is valid(1 uppercase,1 lowercase, 1 special character).
+    //if not will assign a default password.
     if (isValidPassword(password)) {
       this.password = password;
-    }
-    //if not will assign a default password.
-    else {
+    } else {
       this.password = "pw";
     }
 
@@ -77,6 +76,7 @@ public class Employee {
    * returns a boolean.
    *
    * @param name which is the full name provided by the Employee.
+   * @return true or false if contains white space.
    */
   private boolean checkName(String name) {
     return name.contains(" ");
@@ -100,6 +100,7 @@ public class Employee {
    * returns a boolean.
    *
    * @param password which is the password provided by the Employee.
+   * @return true or false if is valid.
    */
   private boolean isValidPassword(String password) {
     //a regex statement to check if it has a lowercase, uppercase or special character.
@@ -120,7 +121,8 @@ public class Employee {
 
   /**
    * Prints out the description of every field and data of an Employee.
-   * returns a String.
+   *
+   * @return String a String to print all that.
    */
   public String toString() {
     return "\nEmployee Details" + "\nName : " + name + "\nUsername : " + username + "\nEmail : "

@@ -3,6 +3,7 @@
  *
  * @author Ronald Quiroz
  */
+@SuppressWarnings("ALL")
 public class AudioPlayer extends Product implements MultimediaControl {
 
   final String supportedAudioFormats;
@@ -44,6 +45,10 @@ public class AudioPlayer extends Product implements MultimediaControl {
     System.out.println("Next");
   }
 
+  /**
+   * Prints out the description of every field and data of an AudioPlayer.
+   * returns a String to print all that.
+   */
   public String toString() {
     return super.toString() + "\nSupported Audio Formats: " + supportedAudioFormats
             + "\nSupported Playlist Formats: " + supportedPlaylistFormats;

@@ -6,15 +6,15 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
 
 /**
  * Class that is used to control everything within the Tab1 'Product Line'.
  * It extends the main controller in which all tabs are located.
+ * connects to the database and loads the products on the TableView.
+ * can add products to the database as well.
  *
  * @author Ronald Quiroz
  */
@@ -28,6 +28,10 @@ public class Tab1Controller extends Controller implements Initializable {
   //field where we write the name of the manufacturer.
   @FXML
   private TextField txtManufacturerField;
+
+  @FXML
+  //label "product was successfully added!".
+  private Label productAddedTxt;
 
   //choiceBox where we select the type of product.
   @FXML
@@ -91,14 +95,45 @@ public class Tab1Controller extends Controller implements Initializable {
   /**
    * handles the event of the AddProduct button by adding the product to the database PRODUCT.
    * Also, loads the database once more so the list of products in the TableView is updated.
+   *
+   * @param event when clicked.
    */
   @FXML
   protected void handleAddProductButtonAction(ActionEvent event) throws SQLException {
-    //insert added product to the database.
-    connectToDb();
+    //print the appropiate message for each possible input.
+    if (txtNameField.getText().equals("") && txtManufacturerField.getText().equals("")) {
+      productAddedTxt.setTextFill(Color.RED);
+      productAddedTxt.setText("Name and manufacturer must be filled!");
+      productAddedTxt.setLayoutX(240.0);
+      productAddedTxt.setVisible(true);
+    } else if (txtNameField.getText().equals("")) {
+      productAddedTxt.setTextFill(Color.RED);
+      productAddedTxt.setText("The name of the product is missing!");
+      productAddedTxt.setLayoutX(255.0);
+      productAddedTxt.setVisible(true);
+    } else if (txtManufacturerField.getText().equals("")) {
+      productAddedTxt.setTextFill(Color.RED);
+      productAddedTxt.setText("The manufacturer of the product is missing!");
+      productAddedTxt.setLayoutX(217.0);
+      productAddedTxt.setVisible(true);
+    } else {
+      //make the label visible when the button is clicked.
+      productAddedTxt.setText("The product was successfully added!");
+      productAddedTxt.setTextFill(Color.BLUE);
+      productAddedTxt.setVisible(true);
 
-    //loads the database into the tableView.
-    loadProductList();
+      //insert added product to the database.
+      connectToDb();
+
+      //loads the database into the tableView.
+      loadProductList();
+
+      //set all the fields to its default state and selected the product that was added.
+      txtNameField.setText("");
+      txtManufacturerField.setText("");
+      chcType.getSelectionModel().selectFirst();
+      tableView.getSelectionModel().selectLast();
+    }
   }
 
   /**
@@ -108,21 +143,21 @@ public class Tab1Controller extends Controller implements Initializable {
    */
   public void loadProductList() throws SQLException {
 
-    final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:./res/OOPdb";
+    final String jdbc_Driver = "org.h2.Driver";
+    final String db_Url = "jdbc:h2:./res/OOPdb";
 
     //  Database credentials
-    final String USER = "";
-    final String PASS = "";
+    final String user = "";
+    final String pass = "";
     Connection conn = null;
     Statement stmt = null;
 
     try {
       // STEP 1: Register JDBC driver
-      Class.forName(JDBC_DRIVER);
+      Class.forName(jdbc_Driver);
 
       //STEP 2: Open a connection
-      conn = DriverManager.getConnection(DB_URL, USER, PASS);
+      conn = DriverManager.getConnection(db_Url, user, pass);
 
       //STEP 3: Execute a query
       stmt = conn.createStatement();
@@ -170,7 +205,7 @@ public class Tab1Controller extends Controller implements Initializable {
         // save to observable list
 
         productLine.add(productFromDB);
-
+        productsDB.add(productFromDB);
       }
       // STEP 4: Clean-up environment
       stmt.close();
@@ -194,21 +229,21 @@ public class Tab1Controller extends Controller implements Initializable {
           "OBL_UNSATISFIED_OBLIGATION"})
   public void connectToDb() {
 
-    final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:./res/OOPdb";
+    final String jdbc_Driver = "org.h2.Driver";
+    final String db_Url = "jdbc:h2:./res/OOPdb";
 
     //  Database credentials
-    final String USER = "";
-    final String PASS = "";
+    final String user = "";
+    final String pass = "";
     Connection conn = null;
     Statement stmt = null;
 
     try {
       // STEP 1: Register JDBC driver
-      Class.forName(JDBC_DRIVER);
+      Class.forName(jdbc_Driver);
 
       //STEP 2: Open a connection
-      conn = DriverManager.getConnection(DB_URL, USER, PASS);
+      conn = DriverManager.getConnection(db_Url, user, pass);
 
       //STEP 3: Execute a query
       stmt = conn.createStatement();
@@ -235,20 +270,6 @@ public class Tab1Controller extends Controller implements Initializable {
 
       String sql = "SELECT id, name, type, manufacturer\n" + "FROM product\n";
 
-      System.out.println("The list of the products on the database so far is: ");
-
-      ResultSet rs = stmt.executeQuery(sql);
-
-      //prints the entire date into the console.
-      while (rs.next()) {
-        //rs.next();
-        String prdId = rs.getString(1);
-        String prdName = rs.getString(2);
-        String prdType = rs.getString(3);
-        String prdManu = rs.getString(4);
-        System.out.println(prdId + " " + prdName + " " + prdType + " " + prdManu);
-
-      }
 
       // STEP 4: Clean-up environment
       stmt.close();

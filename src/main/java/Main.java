@@ -1,16 +1,15 @@
-/**
- * Represents main class for the OOP production project.
- * It creates the initial window.
- *
- * @author Ronald Quiroz
- */
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Represents main class for the OOP production project.
+ * It creates the initial window.
+ *
+ * @author Ronald Quiroz
+ */
 public class Main extends Application {
 
   public static void main(String[] args) {
