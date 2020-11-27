@@ -13,7 +13,7 @@ Note for school project: this may be the only thing someone visiting your page r
 Add an animated gif of your program running. You can use ShareX, GIPHY Capture or another tool. https://blog.github.com/2018-06-29-GIF-that-keeps-on-GIFing/
 Note for school project: This is a great way for friends and family to easily see your project in action. 
 The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
-![Demonstration GIF](resources/MNvPXd3w5U.gif) 
+![Demonstration GIF](resources/MNvPXd3w5U.gif)  <br />
 
 ## Documentation
 
@@ -27,7 +27,7 @@ Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.ht
 
 Such as a class diagram. <br /> 
 The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
- ![Class Diagram](resources/Classes diagram.png)
+ ![Class Diagram](resources/Classes diagram.png) <br />
 ## Getting Started
 
 Instructions to get a copy of the project up and running on someone's local machine for development and testing purposes.
