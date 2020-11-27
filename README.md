@@ -32,9 +32,9 @@ Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.ht
 
 ## Diagrams
 
-Such as a class diagram. <br /> 
-The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
+Class Diagram: <br />
 ![Class Diagram](resources/ClassesDiagram.png) <br />
+Database Diagram: <br />
 ![Database Diagram](resources/DatabaseDiagram.png) <br />
 
 ## Getting Started
@@ -46,11 +46,10 @@ Note for real project: You want to be able to share your project and enable coll
 Note for school project: You want a potential client or hirer to be able to run your program. 
 
 ## Built With
-
-* IDE used  
-* Other software used  
-* Resources used  
-<br />Note for school project: Every section is an opportunity to make an impression. You could briefly add what you know about the IDE and describe your development skills. 
+* JavaFX project using Java 11 and Gradle.
+* IDE: IntelliJ IDEA Ultimate version 2020.2 
+* H2 Database Engine version 1.4.200 (2019-10-14)
+* SceneBuilder for Java 11 version 11.0.0  
 
 ## Contributing
 
@@ -60,34 +59,24 @@ Tell someone how they can contribute to this project.
 
 ## Author
 
-* Your name
+* Ronald Quiroz.
 
 ## License
 
 [License](LICENSE) <br />
 
-Public repositories on GitHub are often used to share open source software. For your repository to truly be open source, you'll need to license it so that others are free to use, change, and distribute the software. https://help.github.com/articles/licensing-a-repository/ <br />
-You have the option to choose a license when you first create your repository. </br>
-If you need to create a license for an existing repository...
-1. Go to your repository.
-2. Click on "Create new file" Button.
-3. Type the file name as License.txt or License.md in the input box next to your repository name, a drop down button appears towards right side.
-4. Choose the type of license of your choice.
-5. Click "Commit new file" button at the bottom (Green button)
-Credit https://stackoverflow.com/questions/31639059/how-to-add-license-to-an-existing-github-project <br />
-To choose a license, see https://choosealicense.com/ 
 
 ## Acknowledgments
 
-* Web sites utilized
-* Classmates who helped
-* Your professor or TA if they helped
+* The course website, put together by my professor, was of massive help from the instructions all the way to the extra resources.
+* I appreciate the help of my professor Scott Vanselow for help me out when I was stuck.
 
 ## History
 
-Information about what has changed. 
+This is the complete version after a semester of putting together small parts at a time.
 
 ## Key Programming Concepts Utilized
+Object Oriented Programming Project. <br />
 
 This section would not necessarily be in a real README.  <br />
 It is a reference for you and a place to impress potential employers with your knowledge. 
