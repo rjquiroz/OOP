@@ -13,7 +13,7 @@ Note for school project: this may be the only thing someone visiting your page r
 Add an animated gif of your program running. You can use ShareX, GIPHY Capture or another tool. https://blog.github.com/2018-06-29-GIF-that-keeps-on-GIFing/
 Note for school project: This is a great way for friends and family to easily see your project in action. 
 The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
-![Demonstration GIF](resources/MNvPXd3w5U.gif)  <br />
+![Demonstration GIF](resources/Demonstration.gif)  <br />
 
 ## Documentation
 
@@ -21,13 +21,15 @@ Create a docs folder in your project. If using Java, generate JavaDoc in your ID
 The URL will be YourGitHubUserName.github.io/YourRepositoryName/foldername/filename<br /> 
 Do not include the docs folder name in your URL. <br />
 Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.html) <br /> <br />
-[JavaDoc](https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.html)
+[JavaDoc](https://github.com/rjquiroz/OOP/blob/master/JavaDoc/index.html)
 
 ## Diagrams
 
 Such as a class diagram. <br /> 
 The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
-![Class Diagram](resources/Classesdiagram.png) <br />
+![Class Diagram](resources/ClassesDiagram.png) <br />
+![Database Diagram](resources/DatabaseDiagram.png) <br />
+
 ## Getting Started
 
 Instructions to get a copy of the project up and running on someone's local machine for development and testing purposes.
