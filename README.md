@@ -14,7 +14,7 @@ Add an animated gif of your program running. You can use ShareX, GIPHY Capture o
 Note for school project: This is a great way for friends and family to easily see your project in action. 
 The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
 ![Demonstration GIF](resources/Demonstration.gif)  <br />
-Here is a link to a longer video showing off some of the changes made due human factor user factor:  <br />
+Here is a link to a longer video showing off some of the changes made due human user factor:  <br />
 https://youtu.be/RvRmaUMSBEU
 
 ## Documentation
