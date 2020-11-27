@@ -17,11 +17,9 @@ This is my object oriented production project. It is a project that is intended 
 
 ## Demonstration
 
-Add an animated gif of your program running. You can use ShareX, GIPHY Capture or another tool. https://blog.github.com/2018-06-29-GIF-that-keeps-on-GIFing/
-Note for school project: This is a great way for friends and family to easily see your project in action. 
-The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
+Here is an animated gif of the program running, show casing some of its main features. <br />
 ![Demonstration GIF](resources/Demonstration.gif)  <br />
-Here is a link to a longer video showing off some of the changes made due human user factor:  <br />
+Here is a link to a longer video showing off some of the changes made taking into consideration human user factor:  <br />
 https://youtu.be/RvRmaUMSBEU
 
 ## Documentation
