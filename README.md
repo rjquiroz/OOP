@@ -57,6 +57,8 @@ Tell someone how they can contribute to this project.
 
 ## License
 
+[License](LICENSE) <br />
+
 Public repositories on GitHub are often used to share open source software. For your repository to truly be open source, you'll need to license it so that others are free to use, change, and distribute the software. https://help.github.com/articles/licensing-a-repository/ <br />
 You have the option to choose a license when you first create your repository. </br>
 If you need to create a license for an existing repository...
