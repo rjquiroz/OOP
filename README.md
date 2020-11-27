@@ -73,7 +73,7 @@ Tell someone how they can contribute to this project.
 
 ## History
 
-This is the complete version after a semester of putting together small parts at a time.
+This is the completed version after a semester of putting together small parts at a time.
 
 ## Key Programming Concepts Utilized
 Object Oriented Programming Project. <br />
