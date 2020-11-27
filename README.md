@@ -1,12 +1,19 @@
 # Object oriented Production Project (OOP)
 One paragraph of project description goes here.<br />
-Briefly address the 5 W's. <br />
-What is the project?<br />
-Who made it? Did you make it independently or with a team?<br />
-When did you make it? At what level of experience and proficiency were / are you?<br />
-Why did you make it? For fun? For an assignment? How does it relect you as a person?<br />
-Where did you make it? What school / class?<br />
-Note for school project: this may be the only thing someone visiting your page reads. Try to make a great impression. Make someone want to hire you. This section will also be useful to you in the future to remind you about the project. 
+
+This is my object oriented production project. It is a project that is intended to be used in a big production company as a way to keep track of their big list of products, and their history of production. It has a database for all the products of the company and another database for the actual production history. It also has a tab where the employee on shift has to sign up. This program was made by myself, Ronald Quiroz whith guidence of my college professor Scott Vanselow. I made it over the 2020 Fall semester as a current junior software engineer student of Florida Gulf Coast University (FGCU). I made this program for professor Vanselow's class of object oriented programming(COP 3003) as the biggest assignment of the semester. I've gone thoroughly over the instructions and add some little pieces of code to make the program more user friendly. Between my human user factor changes are: 
+1. Feedback messages in the Product Line tab(Tab1). 
+2. Clearing the textFields once a product is successfully added, so he user can keep adding more products easily in the Product Line tab.
+3. Selecting automatically the most recent product added in the Product Line tab.
+4. To avoid errors, the "Record Production" button is unavailable until a product is selected from the listView in the Produce tab (Tab2).
+5. Feedback message in Produce Tab for succesfully produced products.
+6. A "Refresh" button in the Production Log tab(Tab 3), so if changes are not registered automatically the user still can refresh and see them.
+7. Feedback message if there are no changes to report in the Production Log tab after clicking refresh.
+8. Help button with instructions for creating a valid name and password in the Employee tab(Tab 4).
+9. Feedback messages in the Employee tab(Tab4).
+10. A pop-up window to display the Employee information once the name and password are filed and the sign in button is clicked.
+11. clearing the textFields once the pop-up window is closed, so another the employee can try again easily.
+
 
 ## Demonstration
 
