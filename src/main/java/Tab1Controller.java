@@ -89,7 +89,6 @@ public class Tab1Controller extends Controller implements Initializable {
 
     //assign the values from the list to the table.
     tableView.setItems(productLine);
-
   }
 
   /**
@@ -117,6 +116,7 @@ public class Tab1Controller extends Controller implements Initializable {
       productAddedTxt.setLayoutX(217.0);
       productAddedTxt.setVisible(true);
     } else {
+      productLine.clear();
       //make the label visible when the button is clicked.
       productAddedTxt.setText("The product was successfully added!");
       productAddedTxt.setTextFill(Color.BLUE);
@@ -203,9 +203,8 @@ public class Tab1Controller extends Controller implements Initializable {
         };
 
         // save to observable list
-
         productLine.add(productFromDB);
-        productsDB.add(productFromDB);
+
       }
       // STEP 4: Clean-up environment
       stmt.close();

@@ -56,6 +56,8 @@ public class Tab3Controller extends Controller implements Initializable {
         for (ProductionRecord p : productionL) {
           textArea.appendText(p.toString() + "\n");
         }
+
+        lastAdded = productionL.toString();
         //clear the array so doesnt repeat itself.
         productionL.clear();
 
