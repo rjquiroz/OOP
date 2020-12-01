@@ -23,11 +23,6 @@ Here is a link to a longer video showing off some of the changes made taking int
 https://youtu.be/RvRmaUMSBEU
 
 ## Documentation
-
-Create a docs folder in your project. If using Java, generate JavaDoc in your IDE. If using C++, use Doxygen. Change repository settings (using Settings at top of page) to use GitHub Pages with your docs folder. Add a link to the javadoc/doxygen index.html file with this markdown: \[Text to appear]\(URL) <br />
-The URL will be rjquiroz.github.io/OOP/JavaDoc/index.html <br /> 
-Do not include the docs folder name in your URL. <br />
-Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.html) <br /> <br />
 [JavaDoc](https://github.com/rjquiroz/OOP/blob/master/JavaDoc/index.html)
 
 ## Diagrams
