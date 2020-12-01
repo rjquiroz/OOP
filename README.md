@@ -44,15 +44,15 @@ In order to get the program running in your computer in IntelliJ you need to fol
 2. Open IntelliJ.
 3. Close any projects that you might have open at the time.
 4. Click on "Get from Version Control".
-5. Make sure that on the left side you have selected "Repository URL".
+5. Make sure that on the left side you have selected "Repository URL", and in the choice box for "Version Control" on top is selected "Git".
 6. Paste the URL of the repository where says "URL" and click "Clone".
-7. After it is cloned, you go to OOP>src>main>java and right click the "Main" class and click on "Run 'Main.main()'".
+7. After it is cloned, go to OOP>src>main>java and right click the "Main" class and click on "Run 'Main.main()'".
 8. Finally, if the program does not run, go to "Run" on the menu bar on top. Then, click on "Edit Configurations" and paste this into the "VM Options" text box:
 
                       --module-path C:\Users\ronal\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml 
                       
  (but include the directory where is located your javafx.lib. instead of mines.)
- 9. Then right click Main and run it again, and it should run smoothly.
+ 9. Then right click Main and run it again, and it should run smoothly. <br />
 ## Built With
 * JavaFX project using Java 11 and Gradle.
 * IDE: IntelliJ IDEA Ultimate version 2020.2 
