@@ -40,7 +40,7 @@ Database Diagram: <br />
 ## Getting Started
 
 In order to get the program running in your computer in IntelliJ you need to follow the next steps:
-1. Copy the link or URL for this repository.
+1. Copy the URL for this repository.
 2. Open IntelliJ.
 3. Close any projects that you might have open at the time.
 4. Click on "Get from Version Control".
