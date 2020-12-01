@@ -46,7 +46,7 @@ In order to get the program running in your computer in IntelliJ you need to fol
 
                       --module-path C:\Users\ronal\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml 
                       
- (but include the directory where is located your javafx.lib. instead of mines.)
+ (but include the directory where is located your javafx.lib. in your computer.)
  9. Then right click Main and run it again, and it should run smoothly. <br />
 ## Built With
 * JavaFX project using Java 11 and Gradle.
