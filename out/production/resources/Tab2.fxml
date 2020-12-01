@@ -6,15 +6,12 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tab2Controller">
-    <Label text=" This is Tab 2: Produce " translateX="10"/>
-    <Label layoutX="93.0" layoutY="68.0" text="Choose Product"/>
-    <ListView layoutX="31.0" layoutY="85.0" prefHeight="200.0" prefWidth="200.0"/>
-    <Label layoutX="390.0" layoutY="60.0" text="Choose Quantity"/>
-    <ComboBox fx:id="cmbQuantity" layoutX="343.0" layoutY="85.0" prefWidth="150.0"/>
-    <Button layoutX="74.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleRecordProductionButtonAction"
-            text="Record Production"/>
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tab2Controller">
+    <Label layoutX="93.0" layoutY="68.0" text="Choose Product" />
+    <ListView fx:id="listView" layoutX="31.0" layoutY="85.0" prefHeight="200.0" prefWidth="200.0" />
+    <Label layoutX="390.0" layoutY="60.0" text="Choose Quantity" />
+    <ComboBox fx:id="cmbQuantity" layoutX="343.0" layoutY="85.0" prefWidth="150.0" />
+    <Button fx:id="recordButton" layoutX="74.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleRecordProductionButtonAction" text="Record Production" />
+   <Label fx:id="productRecordMessage" layoutX="74.0" layoutY="345.0" text="The product was successfully produced and recorded!" textFill="#000dff" visible="false" />
 
 </AnchorPane>

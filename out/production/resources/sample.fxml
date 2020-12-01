@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<AnchorPane minHeight="412.0" minWidth="600." prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="417.0" minWidth="600.0" prefHeight="430.0" prefWidth="600.0">
+        <Tab fx:id="tab1" text="Product Line">
+            <fx:include source="Tab1.fxml" />
+        </Tab>
 
+        <Tab fx:id="tab2" text="Produce">
+            <fx:include source="Tab2.fxml" />
+        </Tab>
 
-<AnchorPane fx:controller="Controller"
-            xmlns:fx="http://javafx.com/fxml">
-    <children>
-        <TabPane>
-            <Tab fx:id="tab1" text="Product Line">
-                <fx:include source="Tab1.fxml"/>
-            </Tab>
+        <Tab fx:id="tab3" text="Production Log">
+            <fx:include source="Tab3.fxml" />
+        </Tab>
 
-            <Tab fx:id="tab2" text="Produce">
-                <fx:include source="Tab2.fxml"/>
-            </Tab>
+        <Tab fx:id="tab4" text="Employee">
+            <fx:include source="Tab4.fxml" />
+        </Tab>
 
-            <Tab fx:id="tab3" text="Production Log">
-                <fx:include source="Tab3.fxml"/>
-            </Tab>
-
-        </TabPane>
-    </children>
+    </TabPane>
 </AnchorPane>
-
-
