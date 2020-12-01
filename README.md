@@ -55,7 +55,7 @@ In order to get the program running in your computer in IntelliJ you need to fol
 * SceneBuilder for Java 11 version 11.0.0  
 
 ## Contributing
-Because of the timespan there were many things that I have to left it out. Thus, the program still has much room for improvement such as: we can make that the database reads the username and password from a text file or maybe we can make it a login window where we need to enter the correct username and password to access to the database. Also, the Employee tab functions by itself, but it really does not contribute to the program as whole. It can be added that once the employee signs in, then in the production log tab is registered which employee added or produced that specific product. I am just sharing some ideas that I might try to work on for this program after. <br />
+Because of the timespan there were many things that I have to leave out. Thus, the program still has much room for improvement such as: we can make that the database reads the username and password from a text file or maybe we can make it a login window where we need to enter the correct username and password to access to the database. Also, the Employee tab functions by itself, but it really does not contribute to the program as whole. It can be added that once the employee signs in, then in the production log tab is registered which employee added or produced that specific product. I am just sharing some ideas that I might try to work on for this program after. <br />
 
 ## Author
 
