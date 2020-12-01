@@ -39,12 +39,20 @@ Database Diagram: <br />
 
 ## Getting Started
 
-Instructions to get a copy of the project up and running on someone's local machine for development and testing purposes.
-<br />
-Note for real project: You want to be able to share your project and enable collaboration. 
-<br />
-Note for school project: You want a potential client or hirer to be able to run your program. 
+In order to get the program running in your computer in IntelliJ you need to follow the next steps:
+1. Copy the link or URL for this repository.
+2. Open IntelliJ.
+3. Close any projects that you might have open at the time.
+4. Click on "Get from Version Control".
+5. Make sure that on the left side you have selected "Repository URL".
+6. Paste the URL of the repository where says "URL" and click "Clone".
+7. After it is cloned, you go to OOP>src>main>java and right click the "Main" class and click on "Run 'Main.main()'".
+8. Finally, if the program does not run, go to "Run" on the menu bar on top. Then, click on "Edit Configurations" and paste this into the "VM Options" text box:
 
+                      --module-path C:\Users\ronal\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml 
+                      
+ (but include the directory where is located your javafx.lib. instead of mines.)
+ 9. Then right click Main and run it again, and it should run smoothly.
 ## Built With
 * JavaFX project using Java 11 and Gradle.
 * IDE: IntelliJ IDEA Ultimate version 2020.2 
@@ -52,10 +60,7 @@ Note for school project: You want a potential client or hirer to be able to run 
 * SceneBuilder for Java 11 version 11.0.0  
 
 ## Contributing
-
-This section is more important for real projects but is good to include in school projects. <br />
-One of the main purposes of GitHub and similar services is to provide a means for project collaboration. <br />
-Tell someone how they can contribute to this project.
+Because of the timespan there were many things that I have to left it out. Thus, the program still has much room for improvement such as: we can make that the database reads the username and password from a text file or maybe we can make it a login window where we need to enter the correct username and password to access to the database. Also, the Employee tab functions by itself, but it really does not contribute to the program as whole. It can be added that once the employee signs in, then in the production log tab is registered which employee added or produced that specific product. I am just sharing some ideas that I might try to work on for this program after. <br />
 
 ## Author
 
@@ -73,11 +78,12 @@ Tell someone how they can contribute to this project.
 
 ## History
 
-This is the completed version after a semester of putting together small parts at a time.
+This is the completed version after a semester of putting together small parts of the program at a time.
 
 ## Key Programming Concepts Utilized
-Object Oriented Programming Project. <br />
-
-This section would not necessarily be in a real README.  <br />
-It is a reference for you and a place to impress potential employers with your knowledge. 
-Identify what concepts you utilize so when you need to use them again you will know that you will find them here. Include a brief description of the concepts in your own words to help you prepare for related interview questions. 
+* Object Oriented Programming: programming base on objects created with a particular behavior. <br />
+* Enum: A group of constants variables. <br />
+* Interfaces: A contract class with abstract methods (without body). Another class must implement this interface for it to access the methods and give them a body. <br />
+* Abstract Class: A class that cannot be instantiated, but it can be referenced. So, we can talk about this class, but we cannot create objects of this class. <br />
+* Overring methods: A method in a subclass with the same name, parameters and return type as a method in its super class. <br />
+* Overloading methods: Two methods with the same name, but different parameters.
