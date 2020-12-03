@@ -46,6 +46,11 @@ public class ProductionRecord extends Controller {
    */
   public ProductionRecord(int productionNumber, int productID, String serialNumber,
                           Date dateProduced) {
+    for (Product p : productsDB) {
+      if (productID == p.id) {
+        this.name = p.name;
+      }
+    }
     this.productionNumber = productionNumber;
     this.productID = productID;
     this.serialNumber = serialNumber;

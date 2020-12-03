@@ -204,6 +204,7 @@ public class Tab1Controller extends Controller implements Initializable {
 
         // save to observable list
         productLine.add(productFromDB);
+        productsDB.add(productFromDB);
 
       }
       // STEP 4: Clean-up environment
