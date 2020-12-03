@@ -20,7 +20,7 @@ This is my object oriented production project. It is a project that is intended 
 Here is an animated gif of the program running, show casing some of its main features. <br />
 ![Demonstration GIF](resources/Demonstration.gif)  <br />
 Here is a link to a longer video showing off some of the changes made taking into consideration human user factor:  <br />
-https://youtu.be/RvRmaUMSBEU
+https://youtu.be/4DHntUlHWFk
 
 ## Documentation
 [JavaDoc](https://rjquiroz.github.io/OOP/docs/JavaDoc/allclasses.html)
