@@ -23,7 +23,7 @@ Here is a link to a longer video showing off some of the changes made taking int
 https://youtu.be/4DHntUlHWFk
 
 ## Documentation
-[JavaDoc](https://rjquiroz.github.io/OOP/docs/JavaDoc/allclasses.html)
+[JavaDoc](https://rjquiroz.github.io/OOP/docs/JavaDoc/allclasses-index.html)
 
 ## Diagrams
 
